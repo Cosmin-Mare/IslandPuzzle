@@ -22,4 +22,8 @@ public class InputManager : MonoBehaviour{
     public bool IsJumpPressed() {
         return playerControls.Player.Jump.triggered;
     }
+
+    public bool IsDragPressed() {
+        return playerControls.Player.Drag.IsPressed();
+    }
 }

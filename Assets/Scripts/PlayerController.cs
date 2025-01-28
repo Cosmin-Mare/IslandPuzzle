@@ -1,7 +1,7 @@
+using System;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour
-{
+public class PlayerController : MonoBehaviour {
     [SerializeField] private const float MOVE_SPEED = 5f;
     [SerializeField] private const float JUMP_HEIGHT = 10f;
 
@@ -27,9 +27,25 @@ public class PlayerController : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
+    void Update() {
         HandleMovement();
+        HandleInteractions();
+    }
+
+    private void HandleInteractions() {
+        //Ray ray = Camera.main.ViewportPointToRay(new Vector3(.5f, .5f, 0f));
+        //RaycastHit hit;
+        //if (Physics.Raycast(ray, out hit, 5f)) {
+        //    Debug.Log(hit.normal);
+        //    Draggable draggable = hit.collider.GetComponent<Draggable>();
+        //    if (draggable != null) {
+        //        if (InputManager.Instance.IsDragPressed()) {
+        //            draggable.setIsDragged(true);
+        //        } else {
+        //            draggable.setIsDragged(false);
+        //        }
+        //    }
+        //}
     }
 
     private void HandleMovement() {
